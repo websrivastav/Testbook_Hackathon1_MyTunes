@@ -1,0 +1,281 @@
+:root{
+    --main-bg:#000;
+    --main-font:"Tilt Neon";
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+a{
+    text-decoration: none;
+}
+body{
+    background: var(--main-bg);
+    font-family: var(--main-font); 
+}
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local(var(--main-font)), url('../fonts/Segoe-UI.woff') format('woff');
+    }
+    
+.container{
+    max-width:1140px;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+}
+.text-white{
+    color: #fff;
+}
+.img-fluid{
+    width: 100%;
+}
+/************************header css************************/
+.mans_header .inner-row{
+    display: grid;
+    grid-template-areas: "logo-box"
+                            "navbar-sec"
+                            "head_social";
+    grid-column-gap: 15px;
+    grid-template-columns: minmax(0,2fr) minmax(0,8fr) minmax(0,2fr);
+    place-items: center;
+    
+}
+.mans_header{
+    padding: 10px 0;
+    font-family: "Outfit";
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color:#00000075 ;
+    border-bottom: 1px solid #202020;
+}
+.mans_header .logo-box img{
+    width:190px;
+}
+.navbar ul, .head_social ul{
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li a{
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 22px;
+}
+.head_social ul li{
+    text-align: center;
+    margin-right: 5px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+.head_social ul li a{
+    color: #000;
+    font-size: 16px;
+    padding: 5px;
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.8s;
+    border:2px solid #fff;
+}
+.head_social ul li a:hover{
+    scale: 1.1;
+    border:2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+/****************************slide css***********************/
+.slide_section{
+    position: relative;
+    background-image: url(../img/banner1.jpg);
+    background-position: center;
+    background-size:cover;
+    padding: 6rem 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    color:#fff;
+}
+.slide_section:before{
+    content:""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background: linear-gradient(to top, #000, transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.slide_section .inner-row{
+    display: grid;
+    grid-template-areas: "slide-leftbox"
+                        "slide-rightbox";
+    grid-column-gap: 15px;
+    grid-template-columns: minmax(0,5fr) minmax(0,5fr);
+    
+}
+.slide-leftbox{
+    position: relative;
+    z-index: 9;
+}
+.slide-leftbox h5{
+    font-family: Courgette;
+    font-size: 20px;
+    font-weight: 100;
+}
+.slide-leftbox h1{
+    font-family: "Rampart One";
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+.slide-leftbox p{
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.main-btn a{
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    background:#F64A7B;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.8s;
+    border:2px solid #F64A7B;
+    display: inline-block;
+}
+.main-btn a:hover{
+    background:transparent;
+    color: #F64A7B;
+    transition: all 0.8s;
+    border:2px solid #F64A7B;
+    transform: rotate3d(1, 1, 0, 22deg);
+}
+/*******************************slide end************************/
+/**********************************about css***********************/
+.about_sec{
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.about_sec .inner-row, .avail-sec .inner-row, .copyright .inner-row{
+    display: grid;
+    grid-template-areas: "full-view";
+    grid-column-gap: 15px;
+    grid-template-columns: minmax(0,1fr);
+    
+}
+.main_heading h4{
+    font-family: "Rampart One";
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+.main-title h4{
+    font-family: "Outfit";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+.about_sec p{
+    font-size: 20px;
+    font-family: var(--main-font);
+    line-height: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.about_sec img{
+    width: 800px;
+    margin-top: 15px;
+}
+/**********************************about end***********************/
+/**********************************collection css***********************/
+.collection_section{
+    padding: 4rem 0;
+    background-color:#fff ;
+}
+.collection_section .inner-row, .collection_section .inner-row{
+    display: grid;
+    grid-template-areas: "half-sec";
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    
+}
+/**********************************collection end***********************/
+.collection_section p, .avail-sec p{
+    font-size: 16px;
+    font-family: var(--main-font);
+    line-height: 35px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+/**********************************avail css********************************/
+.avail-sec{
+    padding: 80px 0;
+    background-image: url(../img/bg2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+}
+/**********************************avail end********************************/
+/**********************************footer css*********************************/
+.mans_footer{
+    padding: 3rem 0;
+}
+.mans_footer .inner-row{
+    display: grid;
+    grid-template-areas: "four-column";
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.footer-box h4{
+    font-family: "Outfit";
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #fff;
+}
+.footer-box ul li a{
+    color:#fff;
+    font-size: 16px;
+    font-family: var(--main-font);
+    padding: 5px 0;
+    display: inline-block;
+}
+.footer-box ul li a:hover{
+    color: #F64A7B;
+}
+.copyright{
+    text-align: center;
+    padding: 15px 0;
+    background: #1a1a1a;
+}
+.copyright p{
+color: #fff;
+}
+/**********************************footer end*********************************/
+
