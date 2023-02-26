@@ -42,7 +42,7 @@
         height: 15px;
     }
 }
-@media (min-width:992px){
+@media (min-width:991px){
     .mans_header .mob-nav{
         display: none;
     }
@@ -56,13 +56,7 @@
     .mans_header .navbar-sec{
         order:3;
     }
-    .mob-nav i{
-        font-size: 16px;
-        color: #fff;
-        border: 1px solid #fff;
-        padding: 8px;
-        border-radius: 5px;
-    }
+    
     .mans_header .inner-row{
         grid-template-columns: minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);
     }
